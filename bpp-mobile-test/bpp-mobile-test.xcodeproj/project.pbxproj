@@ -25,6 +25,8 @@
 		1F8591852068457E00F84540 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591842068457E00F84540 /* ViewConfiguration.swift */; };
 		1F859187206846FF00F84540 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F859186206846FF00F84540 /* LoginView.swift */; };
 		1F85918920684D2D00F84540 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85918820684D2D00F84540 /* LoginViewController.swift */; };
+		1F85919020685C6A00F84540 /* InvoiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85918F20685C6A00F84540 /* InvoiceService.swift */; };
+		1F85919220685CA700F84540 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85919120685CA700F84540 /* Invoice.swift */; };
 		25F29E9C783E52FB43D47061 /* Pods_bpp_mobile_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61F4E1558E9F12929F804DF /* Pods_bpp_mobile_testTests.framework */; };
 		7D2020053EFC73F37DB18521 /* Pods_bpp_mobile_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		1F8591842068457E00F84540 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 		1F859186206846FF00F84540 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1F85918820684D2D00F84540 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1F85918F20685C6A00F84540 /* InvoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceService.swift; sourceTree = "<group>"; };
+		1F85919120685CA700F84540 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		333A41103A063AF1F16547CA /* Pods-bpp-mobile-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bpp_mobile_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F209FA688E292FD2B944F4 /* Pods-bpp-mobile-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 		1F85916F206825EE00F84540 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1F85918A20685C0100F84540 /* Invoice */,
 				1F859170206825F600F84540 /* Login */,
 			);
 			path = Features;
@@ -172,17 +177,17 @@
 			children = (
 				1F859182206843D100F84540 /* View */,
 				1F859181206843C800F84540 /* Controller */,
-				1F859171206825FC00F84540 /* Connection */,
+				1F859171206825FC00F84540 /* Service */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		1F859171206825FC00F84540 /* Connection */ = {
+		1F859171206825FC00F84540 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				1F8591722068261D00F84540 /* LoginService.swift */,
 			);
-			path = Connection;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		1F85917420682A7200F84540 /* Model */ = {
@@ -262,6 +267,47 @@
 				1F8591842068457E00F84540 /* ViewConfiguration.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1F85918A20685C0100F84540 /* Invoice */ = {
+			isa = PBXGroup;
+			children = (
+				1F85918E20685C4100F84540 /* Model */,
+				1F85918D20685C1900F84540 /* Service */,
+				1F85918C20685C1200F84540 /* Controller */,
+				1F85918B20685C0E00F84540 /* View */,
+			);
+			path = Invoice;
+			sourceTree = "<group>";
+		};
+		1F85918B20685C0E00F84540 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F85918C20685C1200F84540 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F85918D20685C1900F84540 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1F85918F20685C6A00F84540 /* InvoiceService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1F85918E20685C4100F84540 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F85919120685CA700F84540 /* Invoice.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C70F327547331D45CD191E74 /* Frameworks */ = {
@@ -502,8 +548,10 @@
 				1F85918920684D2D00F84540 /* LoginViewController.swift in Sources */,
 				1F8591852068457E00F84540 /* ViewConfiguration.swift in Sources */,
 				1F85916A2068204500F84540 /* ConnectionEnvironment.swift in Sources */,
+				1F85919220685CA700F84540 /* Invoice.swift in Sources */,
 				1F85913C2067FAFD00F84540 /* AppDelegate.swift in Sources */,
 				1F85916820681F8500F84540 /* ConnectionDispatcher.swift in Sources */,
+				1F85919020685C6A00F84540 /* InvoiceService.swift in Sources */,
 				1F8591732068261D00F84540 /* LoginService.swift in Sources */,
 				1F859187206846FF00F84540 /* LoginView.swift in Sources */,
 				1F85916C2068207D00F84540 /* ConnectionCore.swift in Sources */,
