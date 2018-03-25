@@ -28,6 +28,7 @@ class LoginView: UIView {
         let textField = UITextField(frame: .zero)
         textField.placeholder = "email"
         textField.borderStyle = .roundedRect
+        textField.text = "waldisney@brasilprepagos.com.br"
         return textField
     }()
     
@@ -36,6 +37,7 @@ class LoginView: UIView {
         textField.isSecureTextEntry = true
         textField.placeholder = "senha"
         textField.borderStyle = .roundedRect
+        textField.text = "Br@silPP123"
         return textField
     }()
     

@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     fileprivate let loginView = LoginView()
-    fileprivate var service: LoginServiceProtocol
+    fileprivate let service: LoginServiceProtocol
     
     override func loadView() {
         self.view = loginView
@@ -39,10 +39,10 @@ fileprivate extension LoginViewController {
     }
     
     func login() {
-        service.login(email: loginView.email, password: loginView.password) { (result) in
+        service.login(email: loginView.email, password: loginView.password) { [unowned self] (result) in
             switch result {
             case .success:
-                print("Sucesso")
+                self.navigationController?.pushViewController(InvoiceViewController(), animated: true)
             case let .error(error):
                 print(error)
             }
