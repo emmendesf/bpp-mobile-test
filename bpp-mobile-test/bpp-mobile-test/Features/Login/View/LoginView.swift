@@ -10,16 +10,11 @@ import Foundation
 import UIKit
 import SnapKit
 
+typealias DefaultCallback = () -> Void
+
 class LoginView: UIView {
     
-    init() {
-        super.init(frame: .zero)
-        setupViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var confirmButtonCallback: DefaultCallback?
     
     var email: String {
         return emailTextField.text ?? ""
@@ -47,8 +42,9 @@ class LoginView: UIView {
     fileprivate lazy var confirmButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.setTitle("confirmar", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .orange
+        button.addTarget(self, action:#selector(self.confirmTapped), for: .touchUpInside)
         return button
     }()
     
@@ -57,6 +53,24 @@ class LoginView: UIView {
         return view
     }()
     
+    init() {
+        super.init(frame: .zero)
+        setupViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension LoginView {
+    func setupConfirmButtonCallback(_ callback: @escaping DefaultCallback) {
+        confirmButtonCallback = callback
+    }
+    
+    @objc func confirmTapped() {
+        confirmButtonCallback?()
+    }
 }
 
 extension LoginView: ViewConfiguration {
