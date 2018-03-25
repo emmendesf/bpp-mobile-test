@@ -24,6 +24,7 @@
 		1F8591732068261D00F84540 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591722068261D00F84540 /* LoginService.swift */; };
 		1F8591782068370D00F84540 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591772068370D00F84540 /* ResponseModel.swift */; };
 		1F85917F20683F9600F84540 /* LoginServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85917E20683F9600F84540 /* LoginServiceSpec.swift */; };
+		1F8591852068457E00F84540 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591842068457E00F84540 /* ViewConfiguration.swift */; };
 		25F29E9C783E52FB43D47061 /* Pods_bpp_mobile_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61F4E1558E9F12929F804DF /* Pods_bpp_mobile_testTests.framework */; };
 		7D2020053EFC73F37DB18521 /* Pods_bpp_mobile_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		1F8591722068261D00F84540 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		1F8591772068370D00F84540 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		1F85917E20683F9600F84540 /* LoginServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceSpec.swift; sourceTree = "<group>"; };
+		1F8591842068457E00F84540 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 		333A41103A063AF1F16547CA /* Pods-bpp-mobile-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bpp_mobile_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F209FA688E292FD2B944F4 /* Pods-bpp-mobile-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		1F85915B2068129000F84540 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1F859183206843DF00F84540 /* View */,
 				1F85917420682A7200F84540 /* Model */,
 				1F85915C206814D400F84540 /* Connection */,
 			);
@@ -169,6 +172,8 @@
 		1F859170206825F600F84540 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1F859182206843D100F84540 /* View */,
+				1F859181206843C800F84540 /* Controller */,
 				1F859171206825FC00F84540 /* Connection */,
 			);
 			path = Login;
@@ -235,6 +240,28 @@
 			children = (
 			);
 			path = Connection;
+			sourceTree = "<group>";
+		};
+		1F859181206843C800F84540 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F859182206843D100F84540 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F859183206843DF00F84540 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F8591842068457E00F84540 /* ViewConfiguration.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C70F327547331D45CD191E74 /* Frameworks */ = {
@@ -404,9 +431,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -471,6 +501,7 @@
 				1F85913E2067FAFD00F84540 /* ViewController.swift in Sources */,
 				1F85916220681EAE00F84540 /* Request.swift in Sources */,
 				1F85916E2068247200F84540 /* ConnectionRouter.swift in Sources */,
+				1F8591852068457E00F84540 /* ViewConfiguration.swift in Sources */,
 				1F85916A2068204500F84540 /* ConnectionEnvironment.swift in Sources */,
 				1F85913C2067FAFD00F84540 /* AppDelegate.swift in Sources */,
 				1F85916820681F8500F84540 /* ConnectionDispatcher.swift in Sources */,

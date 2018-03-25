@@ -6,6 +6,7 @@ target 'bpp-mobile-test' do
   use_frameworks!
 
   # Pods for bpp-mobile-test
+  pod 'SnapKit', '~> 4.0.0'
 
   target 'bpp-mobile-testTests' do
     inherit! :search_paths
