@@ -20,6 +20,7 @@
 		1F85916820681F8500F84540 /* ConnectionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85916720681F8500F84540 /* ConnectionDispatcher.swift */; };
 		1F85916A2068204500F84540 /* ConnectionEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591692068204500F84540 /* ConnectionEnvironment.swift */; };
 		1F85916C2068207D00F84540 /* ConnectionCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85916B2068207D00F84540 /* ConnectionCore.swift */; };
+		1F85916E2068247200F84540 /* ConnectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85916D2068247200F84540 /* ConnectionRouter.swift */; };
 		25F29E9C783E52FB43D47061 /* Pods_bpp_mobile_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61F4E1558E9F12929F804DF /* Pods_bpp_mobile_testTests.framework */; };
 		7D2020053EFC73F37DB18521 /* Pods_bpp_mobile_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		1F85916720681F8500F84540 /* ConnectionDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDispatcher.swift; sourceTree = "<group>"; };
 		1F8591692068204500F84540 /* ConnectionEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionEnvironment.swift; sourceTree = "<group>"; };
 		1F85916B2068207D00F84540 /* ConnectionCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionCore.swift; sourceTree = "<group>"; };
+		1F85916D2068247200F84540 /* ConnectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRouter.swift; sourceTree = "<group>"; };
 		333A41103A063AF1F16547CA /* Pods-bpp-mobile-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bpp_mobile_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F209FA688E292FD2B944F4 /* Pods-bpp-mobile-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				1F85916720681F8500F84540 /* ConnectionDispatcher.swift */,
 				1F8591692068204500F84540 /* ConnectionEnvironment.swift */,
 				1F85916B2068207D00F84540 /* ConnectionCore.swift */,
+				1F85916D2068247200F84540 /* ConnectionRouter.swift */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			files = (
 				1F85913E2067FAFD00F84540 /* ViewController.swift in Sources */,
 				1F85916220681EAE00F84540 /* Request.swift in Sources */,
+				1F85916E2068247200F84540 /* ConnectionRouter.swift in Sources */,
 				1F85916A2068204500F84540 /* ConnectionEnvironment.swift in Sources */,
 				1F85913C2067FAFD00F84540 /* AppDelegate.swift in Sources */,
 				1F85916820681F8500F84540 /* ConnectionDispatcher.swift in Sources */,
