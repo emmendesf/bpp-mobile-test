@@ -14,6 +14,7 @@ public enum ConnectionError: Error {
     case parseFailed
     case requestFailed
     case invalidURL
+    case custom(message: String)
 }
 
 public class ConnectionDispatcher: Dispatcher {
@@ -42,9 +43,12 @@ public class ConnectionDispatcher: Dispatcher {
         let completeURL = hostUrl.appendingPathComponent(request.path)
         var urlRequest = URLRequest(url: completeURL)
         
+        if let params = request.parameters {
+            urlRequest.encodeParameters(parameters: params)
+        }
+        
         environment.headers.forEach { urlRequest.addValue($0.value as! String, forHTTPHeaderField: $0.key) }
         request.headers?.forEach { urlRequest.addValue($0.value as! String, forHTTPHeaderField: $0.key) }
-        
         urlRequest.httpMethod = request.method.rawValue
         
         return urlRequest
@@ -57,5 +61,26 @@ public class ConnectionDispatcher: Dispatcher {
         }
         let jsonResult = try? JSONSerialization.jsonObject(with: filledData, options: JSONSerialization.ReadingOptions.mutableContainers)
         print("DATA: \(jsonResult ?? "EMPTY")")
+    }
+}
+
+private extension URLRequest {
+    private func percentEscapeString(_ string: String) -> String {
+        var characterSet = CharacterSet.alphanumerics
+        characterSet.insert(charactersIn: "-._* ")
+        
+        return string
+            .addingPercentEncoding(withAllowedCharacters: characterSet)!
+            .replacingOccurrences(of: " ", with: "+")
+            .replacingOccurrences(of: " ", with: "+", options: [], range: nil)
+    }
+    
+    mutating func encodeParameters(parameters: [String : String]) {
+        let parameterArray = parameters.map { (arg) -> String in
+            let (key, value) = arg
+            return "\(key)=\(self.percentEscapeString(value))"
+        }
+        
+        httpBody = parameterArray.joined(separator: "&").data(using: String.Encoding.utf8)
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 enum ConnectionRouter: Request {
-    case login
+    case login(email: String, password: String)
     case invoice
     
     var path: String {
@@ -23,9 +23,19 @@ enum ConnectionRouter: Request {
     
     var method: HTTPMethod {
         switch self {
-        case .login,
-             .invoice:
+        case .login:
+            return .post
+        case .invoice:
             return .get
+        }
+    }
+    
+    var parameters: [String : String]? {
+        switch self {
+        case let .login(email, password):
+            return ["email": email, "password": password]
+        default:
+            return nil
         }
     }
     

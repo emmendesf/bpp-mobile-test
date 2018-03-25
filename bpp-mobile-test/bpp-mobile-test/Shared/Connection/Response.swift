@@ -23,6 +23,14 @@ public enum Response {
             return
         }
         
+        let decoder = JSONDecoder()
+        if let parsedResult = try? decoder.decode(ResponseModel.self, from: data) {
+            if parsedResult.code != "200" {
+                self = .error(Int(parsedResult.code), ConnectionError.custom(message: parsedResult.message ?? ""))
+                return
+            }
+        }
+        
         self = .success(data)
     }
 }

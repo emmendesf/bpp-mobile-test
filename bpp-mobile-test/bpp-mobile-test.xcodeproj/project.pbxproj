@@ -21,6 +21,8 @@
 		1F85916A2068204500F84540 /* ConnectionEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591692068204500F84540 /* ConnectionEnvironment.swift */; };
 		1F85916C2068207D00F84540 /* ConnectionCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85916B2068207D00F84540 /* ConnectionCore.swift */; };
 		1F85916E2068247200F84540 /* ConnectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85916D2068247200F84540 /* ConnectionRouter.swift */; };
+		1F8591732068261D00F84540 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591722068261D00F84540 /* LoginService.swift */; };
+		1F8591782068370D00F84540 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591772068370D00F84540 /* ResponseModel.swift */; };
 		25F29E9C783E52FB43D47061 /* Pods_bpp_mobile_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61F4E1558E9F12929F804DF /* Pods_bpp_mobile_testTests.framework */; };
 		7D2020053EFC73F37DB18521 /* Pods_bpp_mobile_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		1F8591692068204500F84540 /* ConnectionEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionEnvironment.swift; sourceTree = "<group>"; };
 		1F85916B2068207D00F84540 /* ConnectionCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionCore.swift; sourceTree = "<group>"; };
 		1F85916D2068247200F84540 /* ConnectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRouter.swift; sourceTree = "<group>"; };
+		1F8591722068261D00F84540 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		1F8591772068370D00F84540 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		333A41103A063AF1F16547CA /* Pods-bpp-mobile-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bpp_mobile_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F209FA688E292FD2B944F4 /* Pods-bpp-mobile-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		1F85913A2067FAFD00F84540 /* bpp-mobile-test */ = {
 			isa = PBXGroup;
 			children = (
+				1F85916F206825EE00F84540 /* Features */,
 				1F85915B2068129000F84540 /* Shared */,
 				1F85913B2067FAFD00F84540 /* AppDelegate.swift */,
 				1F85913D2067FAFD00F84540 /* ViewController.swift */,
@@ -128,6 +133,7 @@
 		1F85915B2068129000F84540 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1F85917420682A7200F84540 /* Model */,
 				1F85915C206814D400F84540 /* Connection */,
 			);
 			path = Shared;
@@ -146,6 +152,38 @@
 				1F85916D2068247200F84540 /* ConnectionRouter.swift */,
 			);
 			path = Connection;
+			sourceTree = "<group>";
+		};
+		1F85916F206825EE00F84540 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1F859170206825F600F84540 /* Login */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		1F859170206825F600F84540 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1F859171206825FC00F84540 /* Connection */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1F859171206825FC00F84540 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				1F8591722068261D00F84540 /* LoginService.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		1F85917420682A7200F84540 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F8591772068370D00F84540 /* ResponseModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C70F327547331D45CD191E74 /* Frameworks */ = {
@@ -385,8 +423,10 @@
 				1F85916A2068204500F84540 /* ConnectionEnvironment.swift in Sources */,
 				1F85913C2067FAFD00F84540 /* AppDelegate.swift in Sources */,
 				1F85916820681F8500F84540 /* ConnectionDispatcher.swift in Sources */,
+				1F8591732068261D00F84540 /* LoginService.swift in Sources */,
 				1F85916C2068207D00F84540 /* ConnectionCore.swift in Sources */,
 				1F85916620681F3B00F84540 /* Result.swift in Sources */,
+				1F8591782068370D00F84540 /* ResponseModel.swift in Sources */,
 				1F85916420681ED300F84540 /* Response.swift in Sources */,
 				1F85915E20681E4700F84540 /* Dispatcher.swift in Sources */,
 			);

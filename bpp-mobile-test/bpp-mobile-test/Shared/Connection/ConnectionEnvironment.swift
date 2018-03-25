@@ -29,8 +29,8 @@ public enum EnvironmentType {
         case .default:
             let env = ConnectionEnvironment("default",
                                             host: "http://test-mobile.dev-bpp.com.br",
-                                            headers: ["Content-Type": "application/json",
-                                                      "Accept": "application/json"]
+                                            headers: ["Content-Type": "application/x-www-form-urlencoded",
+                                                      "Accept": "application/x-www-form-urlencoded"]
             )
             return env
         }
