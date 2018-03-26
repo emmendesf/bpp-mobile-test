@@ -13,6 +13,7 @@ final class InvoiceView: UIView {
         let tableView = UITableView(frame: .zero)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
+        tableView.separatorStyle = .none
         return tableView
     }()
     

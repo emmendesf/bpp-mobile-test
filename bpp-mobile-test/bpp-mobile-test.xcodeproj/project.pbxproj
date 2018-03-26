@@ -29,6 +29,8 @@
 		1F85919220685CA700F84540 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85919120685CA700F84540 /* Invoice.swift */; };
 		1F85919420685DC800F84540 /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85919320685DC800F84540 /* InvoiceViewController.swift */; };
 		1F8591962068665900F84540 /* InvoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591952068665900F84540 /* InvoiceView.swift */; };
+		1F85919920686A0D00F84540 /* InvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85919820686A0D00F84540 /* InvoiceTableViewCell.swift */; };
+		1F85919C206874F200F84540 /* InvoiceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85919B206874F200F84540 /* InvoiceDataSource.swift */; };
 		25F29E9C783E52FB43D47061 /* Pods_bpp_mobile_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61F4E1558E9F12929F804DF /* Pods_bpp_mobile_testTests.framework */; };
 		7D2020053EFC73F37DB18521 /* Pods_bpp_mobile_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		1F85919120685CA700F84540 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		1F85919320685DC800F84540 /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
 		1F8591952068665900F84540 /* InvoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceView.swift; sourceTree = "<group>"; };
+		1F85919820686A0D00F84540 /* InvoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCell.swift; sourceTree = "<group>"; };
+		1F85919B206874F200F84540 /* InvoiceDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDataSource.swift; sourceTree = "<group>"; };
 		333A41103A063AF1F16547CA /* Pods-bpp-mobile-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bpp_mobile_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F209FA688E292FD2B944F4 /* Pods-bpp-mobile-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 		1F85918A20685C0100F84540 /* Invoice */ = {
 			isa = PBXGroup;
 			children = (
+				1F85919A206874DC00F84540 /* DataSource */,
+				1F859197206869EA00F84540 /* Cell */,
 				1F85918E20685C4100F84540 /* Model */,
 				1F85918D20685C1900F84540 /* Service */,
 				1F85918C20685C1200F84540 /* Controller */,
@@ -314,6 +320,22 @@
 				1F85919120685CA700F84540 /* Invoice.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1F859197206869EA00F84540 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1F85919820686A0D00F84540 /* InvoiceTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1F85919A206874DC00F84540 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				1F85919B206874F200F84540 /* InvoiceDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		C70F327547331D45CD191E74 /* Frameworks */ = {
@@ -551,7 +573,9 @@
 			files = (
 				1F85916220681EAE00F84540 /* Request.swift in Sources */,
 				1F85916E2068247200F84540 /* ConnectionRouter.swift in Sources */,
+				1F85919C206874F200F84540 /* InvoiceDataSource.swift in Sources */,
 				1F8591962068665900F84540 /* InvoiceView.swift in Sources */,
+				1F85919920686A0D00F84540 /* InvoiceTableViewCell.swift in Sources */,
 				1F85918920684D2D00F84540 /* LoginViewController.swift in Sources */,
 				1F8591852068457E00F84540 /* ViewConfiguration.swift in Sources */,
 				1F85916A2068204500F84540 /* ConnectionEnvironment.swift in Sources */,

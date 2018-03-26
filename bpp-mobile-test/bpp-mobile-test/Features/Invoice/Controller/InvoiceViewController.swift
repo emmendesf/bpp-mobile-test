@@ -11,6 +11,7 @@ import UIKit
 class InvoiceViewController: UIViewController {
     let invoiceView = InvoiceView()
     let service: InvoiceServiceProtocol
+    var dataSource: InvoiceDataSource?
     
     init(service: InvoiceServiceProtocol = InvoiceService()) {
         self.service = service
@@ -33,13 +34,22 @@ class InvoiceViewController: UIViewController {
 
 extension InvoiceViewController {
     fileprivate func fetchInvoices() {
-        service.invoice { (result) in
+        service.invoice { [unowned self] (result) in
             switch result {
-            case .success:
-                print("Sucesso")
+            case let .success(invoiceList):
+                self.setupDataSource(invoiceList)
             case let .error(error):
                 print(error)
             }
         }
+    }
+    
+    fileprivate func setupDataSource(_ invoiceList: [Invoice]) {
+        dataSource = InvoiceDataSource(
+            invoiceList: invoiceList,
+            tableView: invoiceView.tableView
+        )
+        invoiceView.tableView.dataSource = dataSource
+        invoiceView.tableView.reloadData()
     }
 }
