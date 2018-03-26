@@ -22,6 +22,7 @@ class ConnectionCore {
                 case let .success(data):
                     do {
                         let decoder = JSONDecoder()
+                        decoder.dateDecodingStrategy = .formatted(DateFormatter.transactionFormattedDateFormatter)
                         let parsedResult = try decoder.decode(C.self, from: data)
                         DispatchQueue.main.async {
                             completion(.success(parsedResult))

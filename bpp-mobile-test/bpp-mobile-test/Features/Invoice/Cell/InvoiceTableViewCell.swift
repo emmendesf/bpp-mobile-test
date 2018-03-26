@@ -75,9 +75,9 @@ final class InvoiceTableViewCell: UITableViewCell {
 
 extension InvoiceTableViewCell {
     func setup(_ invoice: Invoice) {
-        dateLabel.text = invoice.transactionDate
+        dateLabel.text = invoice.formattedDate
         merchantLabel.text = invoice.merchantName
-        amountLabel.text = String(invoice.transactionAmount)
+        amountLabel.text = invoice.formattedTransactionAmount
         statusLabel.text = invoice.transactionStatus.desc
         statusLabel.textColor = invoice.transactionStatus.color
         circleStatusView.backgroundColor = invoice.transactionStatus.color

@@ -32,6 +32,7 @@
 		1F85919920686A0D00F84540 /* InvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85919820686A0D00F84540 /* InvoiceTableViewCell.swift */; };
 		1F85919C206874F200F84540 /* InvoiceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85919B206874F200F84540 /* InvoiceDataSource.swift */; };
 		1F85919E206882A500F84540 /* InvoiceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85919D206882A500F84540 /* InvoiceStatus.swift */; };
+		1F8591A02068887900F84540 /* TransactionCurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85919F2068887900F84540 /* TransactionCurrencyType.swift */; };
 		25F29E9C783E52FB43D47061 /* Pods_bpp_mobile_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61F4E1558E9F12929F804DF /* Pods_bpp_mobile_testTests.framework */; };
 		7D2020053EFC73F37DB18521 /* Pods_bpp_mobile_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		1F85919820686A0D00F84540 /* InvoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCell.swift; sourceTree = "<group>"; };
 		1F85919B206874F200F84540 /* InvoiceDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDataSource.swift; sourceTree = "<group>"; };
 		1F85919D206882A500F84540 /* InvoiceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceStatus.swift; sourceTree = "<group>"; };
+		1F85919F2068887900F84540 /* TransactionCurrencyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCurrencyType.swift; sourceTree = "<group>"; };
 		333A41103A063AF1F16547CA /* Pods-bpp-mobile-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bpp_mobile_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F209FA688E292FD2B944F4 /* Pods-bpp-mobile-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			children = (
 				1F85919120685CA700F84540 /* Invoice.swift */,
 				1F85919D206882A500F84540 /* InvoiceStatus.swift */,
+				1F85919F2068887900F84540 /* TransactionCurrencyType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				1F85916420681ED300F84540 /* Response.swift in Sources */,
 				1F85919E206882A500F84540 /* InvoiceStatus.swift in Sources */,
 				1F85915E20681E4700F84540 /* Dispatcher.swift in Sources */,
+				1F8591A02068887900F84540 /* TransactionCurrencyType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
