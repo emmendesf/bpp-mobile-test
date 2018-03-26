@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        self.title = "Login"
     }
     
     init(service: LoginServiceProtocol = LoginService()) {

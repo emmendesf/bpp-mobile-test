@@ -29,6 +29,7 @@ class InvoiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchInvoices()
+        self.title = "Timeline"
     }
 }
 
