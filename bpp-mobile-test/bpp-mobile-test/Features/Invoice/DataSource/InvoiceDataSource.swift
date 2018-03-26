@@ -46,15 +46,7 @@ extension InvoiceDataSource: UITableViewDataSource {
         let invoice = invoiceList[indexPath.row]
         cell.setup(invoice)
         
-        //        guard let cell = tableView.dequeueReusableCell(
-        //            withIdentifier: String(describing: InvoiceTableViewCell.self),
-        //            for: indexPath
-        //            ) as? InvoiceTableViewCell else {
-        //                fatalError("Wrong cell type")
-        //        }
-        
         return cell
     }
-    
 }
 
