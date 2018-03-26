@@ -78,7 +78,9 @@ extension InvoiceTableViewCell {
         dateLabel.text = invoice.transactionDate
         merchantLabel.text = invoice.merchantName
         amountLabel.text = String(invoice.transactionAmount)
-        statusLabel.text = invoice.transactionStatus
+        statusLabel.text = invoice.transactionStatus.desc
+        statusLabel.textColor = invoice.transactionStatus.color
+        circleStatusView.backgroundColor = invoice.transactionStatus.color
     }
 }
 

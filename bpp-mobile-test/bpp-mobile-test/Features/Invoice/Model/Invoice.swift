@@ -16,7 +16,7 @@ struct Invoice: Codable {
     var transactionAmount: Double
     var billingCurrency: String
     var billingAmount: Double
-    var transactionStatus: String
+    var transactionStatus: InvoiceStatus
     var transactionName: String
     var merchantName: String
     var mccCode: String
