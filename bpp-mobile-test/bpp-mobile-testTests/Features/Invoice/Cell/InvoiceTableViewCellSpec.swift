@@ -19,12 +19,7 @@ class InvoiceTableViewCellSpec: QuickSpec {
         
         describe("given InvoiceTableViewCell") {
             beforeEach {
-                let urlPath = Bundle(for: InvoiceTableViewCellSpec.self).url(forResource: "invoice_object", withExtension: "json")!
-                let data = try! Data(contentsOf: urlPath, options: .mappedIfSafe)
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .formatted(DateFormatter.transactionFormattedDateFormatter)
-                invoiceMock = try! decoder.decode(Invoice.self, from: data)
-                
+                invoiceMock = MockHelper<Invoice, InvoiceTableViewCellSpec>().mock(with: "invoice_object")
                 sut = InvoiceTableViewCell()
                 sut.frame = CGRect(x: 0, y: 0, width: 320, height: 162)
                 sut.backgroundColor = .white
