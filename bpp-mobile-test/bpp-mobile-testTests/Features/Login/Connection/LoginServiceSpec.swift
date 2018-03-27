@@ -16,26 +16,6 @@ final class LoginServiceSpec: QuickSpec {
         var sut: LoginService!
         var connectionDispatcherMock: ConnectionDispatcherMock!
         
-        func checkSuccessCallback<T>(_ result: Result<T>) {
-            expect(connectionDispatcherMock.didCallSuccess).to(beTruthy())
-            expect({
-                guard case .success = result else {
-                    return .failed(reason: "wrong enum case")
-                }
-                return .succeeded
-            }).to(succeed())
-        }
-        
-        func checkErrorCallback<T>(_ result: Result<T>) {
-            expect(connectionDispatcherMock.didCallSuccess).to(beFalsy())
-            expect({
-                guard case .error = result else {
-                    return .failed(reason: "wrong enum case")
-                }
-                return .succeeded
-            }).to(succeed())
-        }
-        
         describe("given LoginService") {
             
             beforeEach {
@@ -54,7 +34,7 @@ final class LoginServiceSpec: QuickSpec {
                 }
                 
                 it("then fetchPayments should succeed") {
-                    sut.login(email: "", password: "", completion: checkSuccessCallback)
+                    sut.login(email: "", password: "", completion: ConnectionDispatcherMock.checkSuccessCallback)
                 }
             }
             
@@ -64,7 +44,7 @@ final class LoginServiceSpec: QuickSpec {
                 }
                 
                 it("then fetchPayments should fail") {
-                    sut.login(email: "", password: "", completion: checkErrorCallback)
+                    sut.login(email: "", password: "", completion: ConnectionDispatcherMock.checkErrorCallback)
                 }
             }
         }

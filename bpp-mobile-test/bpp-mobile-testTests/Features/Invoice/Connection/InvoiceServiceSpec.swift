@@ -16,26 +16,6 @@ final class InvoiceServiceSpec: QuickSpec {
         var sut: InvoiceService!
         var connectionDispatcherMock: ConnectionDispatcherMock!
         
-        func checkSuccessCallback<T>(_ result: Result<T>) {
-            expect(connectionDispatcherMock.didCallSuccess).to(beTruthy())
-            expect({
-                guard case .success = result else {
-                    return .failed(reason: "wrong enum case")
-                }
-                return .succeeded
-            }).to(succeed())
-        }
-        
-        func checkErrorCallback<T>(_ result: Result<T>) {
-            expect(connectionDispatcherMock.didCallSuccess).to(beFalsy())
-            expect({
-                guard case .error = result else {
-                    return .failed(reason: "wrong enum case")
-                }
-                return .succeeded
-            }).to(succeed())
-        }
-        
         describe("given InvoiceService") {
             
             beforeEach {
@@ -54,7 +34,7 @@ final class InvoiceServiceSpec: QuickSpec {
                 }
                 
                 it("then fetchPayments should succeed") {
-                    sut.invoice(completion: checkSuccessCallback)
+                    sut.invoice(completion: ConnectionDispatcherMock.checkSuccessCallback)
                 }
             }
             
@@ -64,7 +44,7 @@ final class InvoiceServiceSpec: QuickSpec {
                 }
                 
                 it("then fetchPayments should fail") {
-                    sut.invoice(completion: checkErrorCallback)
+                    sut.invoice(completion: ConnectionDispatcherMock.checkErrorCallback)
                 }
             }
         }
