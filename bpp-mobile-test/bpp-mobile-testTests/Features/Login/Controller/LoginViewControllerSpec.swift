@@ -24,14 +24,14 @@ final class LoginServiceMock: LoginServiceProtocol {
     }
 }
 
-final class LoginViewControlerSpec: QuickSpec {
+final class LoginViewControllerSpec: QuickSpec {
     override func spec() {
         describe("given LoginViewControler") {
             context("when initializing") {
                 var sut: LoginViewController!
                 
                 beforeEach {
-                    let reponseModelMock = MockHelper<ResponseModel, LoginViewControlerSpec>().mock(with: "login_success")
+                    let reponseModelMock = MockHelper<ResponseModel, LoginViewControllerSpec>().mock(with: "login_success")
                     let serviceMock = LoginServiceMock(loginResult: Result.success(reponseModelMock))
                     sut = LoginViewController(service: serviceMock)
                     let nav = UINavigationController(rootViewController: sut)

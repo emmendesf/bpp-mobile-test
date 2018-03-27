@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F80F29D2069E5AD00D239F6 /* InvoiceTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F80F29C2069E5AD00D239F6 /* InvoiceTableViewCellSpec.swift */; };
 		1F80F2A12069EABB00D239F6 /* invoice_object.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F80F2A02069EABB00D239F6 /* invoice_object.json */; };
-		1F80F2A72069EFF800D239F6 /* LoginViewControlerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F80F2A62069EFF800D239F6 /* LoginViewControlerSpec.swift */; };
+		1F80F2A72069EFF800D239F6 /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F80F2A62069EFF800D239F6 /* LoginViewControllerSpec.swift */; };
 		1F80F2A92069F0A300D239F6 /* UIWindowTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F80F2A82069F0A300D239F6 /* UIWindowTestHelper.swift */; };
 		1F80F2AE2069F32D00D239F6 /* MockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F80F2AD2069F32D00D239F6 /* MockHelper.swift */; };
 		1F80F2B02069F49400D239F6 /* login_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F80F2AF2069F49400D239F6 /* login_success.json */; };
@@ -62,7 +62,7 @@
 /* Begin PBXFileReference section */
 		1F80F29C2069E5AD00D239F6 /* InvoiceTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCellSpec.swift; sourceTree = "<group>"; };
 		1F80F2A02069EABB00D239F6 /* invoice_object.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = invoice_object.json; sourceTree = "<group>"; };
-		1F80F2A62069EFF800D239F6 /* LoginViewControlerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControlerSpec.swift; sourceTree = "<group>"; };
+		1F80F2A62069EFF800D239F6 /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		1F80F2A82069F0A300D239F6 /* UIWindowTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowTestHelper.swift; sourceTree = "<group>"; };
 		1F80F2AD2069F32D00D239F6 /* MockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHelper.swift; sourceTree = "<group>"; };
 		1F80F2AF2069F49400D239F6 /* login_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login_success.json; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		1F80F2A52069EFBE00D239F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1F80F2A62069EFF800D239F6 /* LoginViewControlerSpec.swift */,
+				1F80F2A62069EFF800D239F6 /* LoginViewControllerSpec.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -718,7 +718,7 @@
 				1F80F2AE2069F32D00D239F6 /* MockHelper.swift in Sources */,
 				1F80F2B5206A919300D239F6 /* InvoiceViewControllerSpec.swift in Sources */,
 				1F85917F20683F9600F84540 /* LoginServiceSpec.swift in Sources */,
-				1F80F2A72069EFF800D239F6 /* LoginViewControlerSpec.swift in Sources */,
+				1F80F2A72069EFF800D239F6 /* LoginViewControllerSpec.swift in Sources */,
 				1F80F2BA206A93DD00D239F6 /* InvoiceDataSourceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

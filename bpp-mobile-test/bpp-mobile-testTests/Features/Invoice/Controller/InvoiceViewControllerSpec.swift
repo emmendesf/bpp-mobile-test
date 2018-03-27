@@ -24,14 +24,14 @@ final class InvoiceServiceMock: InvoiceServiceProtocol {
     }
 }
 
-final class InvoiceViewControlerSpec: QuickSpec {
+final class InvoiceViewControllerSpec: QuickSpec {
     override func spec() {
         describe("given InvoiceViewControler") {
             context("when initializing") {
                 var sut: InvoiceViewController!
                 
                 beforeEach {
-                    let invoiceListMock = MockHelper<[Invoice], InvoiceViewControlerSpec>().mock(with: "invoice_list")
+                    let invoiceListMock = MockHelper<[Invoice], InvoiceViewControllerSpec>().mock(with: "invoice_list")
                     let serviceMock = InvoiceServiceMock(invoiceResult: Result.success(invoiceListMock))
                     sut = InvoiceViewController(service: serviceMock)
                     let nav = UINavigationController(rootViewController: sut)

@@ -20,7 +20,7 @@ final class InvoiceDataSourceSpec: QuickSpec {
             var invoiceListMock: [Invoice]!
             
             beforeEach {
-                invoiceListMock = MockHelper<[Invoice], InvoiceViewControlerSpec>().mock(with: "invoice_list")
+                invoiceListMock = MockHelper<[Invoice], InvoiceDataSourceSpec>().mock(with: "invoice_list")
                 let frame = CGRect(x: 0, y: 0, width: 320, height: 540)
                 tableView = UITableView(frame: frame)
                 sut = InvoiceDataSource(invoiceList: invoiceListMock, tableView: tableView)
