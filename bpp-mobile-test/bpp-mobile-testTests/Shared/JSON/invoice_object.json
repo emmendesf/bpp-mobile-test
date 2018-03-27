@@ -1,0 +1,14 @@
+{
+    "transactionId": "806816958276783628074646240000001812",
+    "transactionDate": "09032018 13:36:56",
+    "transactionFormattedDate": "2018-03-09T13:36:56",
+    "transactionCurrency": "BRL",
+    "transactionAmount": 19.4,
+    "billingCurrency": "BRL",
+    "billingAmount": 19.4,
+    "transactionStatus": "Settled",
+    "transactionName": "000000-Purchase",
+    "merchantName": "RESTAURANTE FLORE",
+    "mccCode": "5812",
+    "mccDescription": "Restaurants"
+}

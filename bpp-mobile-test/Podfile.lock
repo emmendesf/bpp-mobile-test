@@ -1,18 +1,34 @@
 PODS:
-  - IQKeyboardManagerSwift (5.0.0)
-  - Nimble (7.0.2)
+  - iOSSnapshotTestCase (2.2.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 2.2.0)
+  - iOSSnapshotTestCase/Core (2.2.0)
+  - iOSSnapshotTestCase/SwiftSupport (2.2.0):
+    - iOSSnapshotTestCase/Core
+  - IQKeyboardManagerSwift (5.0.8)
+  - Nimble (7.0.3)
+  - Nimble-Snapshots (6.4.1):
+    - Nimble-Snapshots/Core (= 6.4.1)
+  - Nimble-Snapshots/Core (6.4.1):
+    - iOSSnapshotTestCase (~> 2.0)
+    - Nimble (~> 7.0)
+  - Quick (1.2.0)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
-  - IQKeyboardManagerSwift (= 5.0.0)
-  - Nimble (~> 7.0.2)
+  - IQKeyboardManagerSwift (~> 5.0.8)
+  - Nimble (~> 7.0.3)
+  - Nimble-Snapshots (~> 6.4.1)
+  - Quick (~> 1.2.0)
   - SnapKit (~> 4.0.0)
 
 SPEC CHECKSUMS:
-  IQKeyboardManagerSwift: 3f340202ebe1a7076279b9b9b3c817243ddb3aab
-  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
+  iOSSnapshotTestCase: 415bd84f9dbba4ff45fede49d800bc7332fbedac
+  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Nimble-Snapshots: 438fb1a6fa3c655e246fc9ac375f6cd2964d759a
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: e5726c2f14270b5a9ed681b4af99411b8924f215
+PODFILE CHECKSUM: bc70b7e4d0cb4af4f15b3ba1cc33fcdc31e38036
 
 COCOAPODS: 1.4.0
