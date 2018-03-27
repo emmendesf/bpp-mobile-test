@@ -18,6 +18,13 @@ final class InvoiceView: UIView {
         return tableView
     }()
     
+    lazy fileprivate(set) var activityIndicator = { () -> UIActivityIndicatorView in
+        let aiv = UIActivityIndicatorView(frame: .zero)
+        aiv.hidesWhenStopped = true
+        aiv.activityIndicatorViewStyle = .gray
+        return aiv
+    }()
+    
     init() {
         super.init(frame: .zero)
         setupViews()
@@ -28,14 +35,35 @@ final class InvoiceView: UIView {
     }
 }
 
+extension InvoiceView {
+    func updateViewState(_ state: ViewState) {
+        switch state {
+        case .loading:
+            activityIndicator.startAnimating()
+            tableView.isHidden = true
+        case .ready:
+            activityIndicator.stopAnimating()
+            tableView.isHidden = false
+        case .error:
+            activityIndicator.stopAnimating()
+            tableView.isHidden = false
+        }
+    }
+}
+
 extension InvoiceView: ViewConfiguration {
     func buildViewHierarchy() {
+        addSubview(activityIndicator)
         addSubview(tableView)
     }
     
     func setupConstraints() {
         tableView.snp.makeConstraints { (view) in
             view.edges.equalToSuperview()
+        }
+        
+        activityIndicator.snp.makeConstraints { (view) in
+            view.center.equalToSuperview()
         }
     }
 }

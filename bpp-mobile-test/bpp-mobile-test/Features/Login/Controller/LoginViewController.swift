@@ -53,15 +53,16 @@ fileprivate extension LoginViewController {
                 self.loginView.updateViewState(.ready)
                 self.navigationController?.pushViewController(InvoiceViewController(), animated: true)
             case let .error(error):
-                let message: String
-                if let parsedError = error as? ConnectionError {
-                    message = parsedError.desc
-                } else {
-                    message = error.localizedDescription
-                }
-                
-                self.loginView.updateViewState(.error(message))
+                self.loginView.updateViewState(.error(self.errorMessage(error)))
             }
+        }
+    }
+    
+    func errorMessage(_ error: Error) -> String {
+        if let parsedError = error as? ConnectionError {
+            return parsedError.desc
+        } else {
+            return error.localizedDescription
         }
     }
     

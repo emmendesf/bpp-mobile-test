@@ -18,26 +18,26 @@ enum InvoiceStatus: String, Codable {
     var desc: String {
         switch self {
         case .settled:
-            return "Aprovada"
+            return "Aprovado"
         case .pending:
             return "Pendente"
         case .reversed:
-            return "Cancelada"
+            return "Cancelado"
         case .declined:
-            return "Recusada"
+            return "Recusado"
         }
     }
     
     var color: UIColor {
         switch self {
         case .settled:
-            return .green
+            return .CustomBlue
         case .pending:
-            return .yellow
+            return .CustomYellow
         case .reversed:
-            return .gray
+            return .CustomOrange
         case .declined:
-            return .red
+            return .CustomRed
         }
     }
 }

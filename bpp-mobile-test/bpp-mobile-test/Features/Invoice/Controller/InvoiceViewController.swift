@@ -35,11 +35,14 @@ class InvoiceViewController: UIViewController {
 
 extension InvoiceViewController {
     fileprivate func fetchInvoices() {
+        invoiceView.updateViewState(.loading)
         service.invoice { [unowned self] (result) in
             switch result {
             case let .success(invoiceList):
+                self.invoiceView.updateViewState(.ready)
                 self.setupDataSource(invoiceList)
             case let .error(error):
+                self.invoiceView.updateViewState(.error(error.localizedDescription))
                 print(error)
             }
         }
