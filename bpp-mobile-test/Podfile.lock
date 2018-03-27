@@ -1,15 +1,18 @@
 PODS:
+  - IQKeyboardManagerSwift (5.0.0)
   - Nimble (7.0.2)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift (= 5.0.0)
   - Nimble (~> 7.0.2)
   - SnapKit (~> 4.0.0)
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 3f340202ebe1a7076279b9b9b3c817243ddb3aab
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 5998028e2eb1e91230d213914547598ad3827cde
+PODFILE CHECKSUM: e5726c2f14270b5a9ed681b4af99411b8924f215
 
 COCOAPODS: 1.4.0

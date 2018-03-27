@@ -35,6 +35,7 @@
 		1F8591A02068887900F84540 /* TransactionCurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85919F2068887900F84540 /* TransactionCurrencyType.swift */; };
 		1F8591A32069C4C200F84540 /* ColorPallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591A22069C4C200F84540 /* ColorPallet.swift */; };
 		1F8591A52069C7A100F84540 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591A42069C7A100F84540 /* Gradient.swift */; };
+		1F8591A72069CEDB00F84540 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591A62069CEDB00F84540 /* ViewState.swift */; };
 		25F29E9C783E52FB43D47061 /* Pods_bpp_mobile_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61F4E1558E9F12929F804DF /* Pods_bpp_mobile_testTests.framework */; };
 		7D2020053EFC73F37DB18521 /* Pods_bpp_mobile_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		1F85919F2068887900F84540 /* TransactionCurrencyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCurrencyType.swift; sourceTree = "<group>"; };
 		1F8591A22069C4C200F84540 /* ColorPallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallet.swift; sourceTree = "<group>"; };
 		1F8591A42069C7A100F84540 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		1F8591A62069CEDB00F84540 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		333A41103A063AF1F16547CA /* Pods-bpp-mobile-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bpp_mobile_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F209FA688E292FD2B944F4 /* Pods-bpp-mobile-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				1F8591842068457E00F84540 /* ViewConfiguration.swift */,
+				1F8591A62069CEDB00F84540 /* ViewState.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -525,10 +528,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +603,7 @@
 				1F8591962068665900F84540 /* InvoiceView.swift in Sources */,
 				1F85919920686A0D00F84540 /* InvoiceTableViewCell.swift in Sources */,
 				1F85918920684D2D00F84540 /* LoginViewController.swift in Sources */,
+				1F8591A72069CEDB00F84540 /* ViewState.swift in Sources */,
 				1F8591852068457E00F84540 /* ViewConfiguration.swift in Sources */,
 				1F85916A2068204500F84540 /* ConnectionEnvironment.swift in Sources */,
 				1F85919220685CA700F84540 /* Invoice.swift in Sources */,

@@ -15,6 +15,15 @@ public enum ConnectionError: Error {
     case requestFailed
     case invalidURL
     case custom(message: String)
+    
+    var desc: String {
+        switch self {
+        case let .custom(message):
+            return message
+        default:
+            return "Ocorreu um erro"
+        }
+    }
 }
 
 public class ConnectionDispatcher: Dispatcher {

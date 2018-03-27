@@ -46,12 +46,21 @@ fileprivate extension LoginViewController {
     }
     
     func login() {
+        loginView.updateViewState(.loading)
         service.login(email: loginView.email, password: loginView.password) { [unowned self] (result) in
             switch result {
             case .success:
+                self.loginView.updateViewState(.ready)
                 self.navigationController?.pushViewController(InvoiceViewController(), animated: true)
             case let .error(error):
-                print(error)
+                let message: String
+                if let parsedError = error as? ConnectionError {
+                    message = parsedError.desc
+                } else {
+                    message = error.localizedDescription
+                }
+                
+                self.loginView.updateViewState(.error(message))
             }
         }
     }

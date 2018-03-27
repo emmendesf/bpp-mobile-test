@@ -67,6 +67,23 @@ class LoginView: UIView {
         return view
     }()
     
+    lazy fileprivate(set) var activityIndicator = { () -> UIActivityIndicatorView in
+        let aiv = UIActivityIndicatorView(frame: .zero)
+        aiv.hidesWhenStopped = true
+        aiv.activityIndicatorViewStyle = .gray
+        return aiv
+    }()
+    
+    fileprivate lazy var errorLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = .CustomRed
+        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        label.isHidden = true
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
+    }()
+    
     init() {
         super.init(frame: .zero)
         setupViews()
@@ -82,6 +99,26 @@ extension LoginView {
         confirmButtonCallback = callback
     }
     
+    func updateViewState(_ state: ViewState) {
+        switch state {
+        case .loading:
+            activityIndicator.startAnimating()
+            containerView.alpha = 0.5
+            errorLabel.isHidden = true
+            errorLabel.text = ""
+        case .ready:
+            activityIndicator.stopAnimating()
+            containerView.alpha = 1
+            errorLabel.isHidden = true
+            errorLabel.text = ""
+        case let .error(message):
+            activityIndicator.stopAnimating()
+            containerView.alpha = 1
+            errorLabel.isHidden = false
+            errorLabel.text = message
+        }
+    }
+    
     @objc func confirmTapped() {
         confirmButtonCallback?()
     }
@@ -93,14 +130,21 @@ extension LoginView: ViewConfiguration {
             view.centerX.equalToSuperview()
             view.height.equalTo(160)
             view.width.equalTo(171)
-            view.top.equalToSuperview().offset(30)
+            view.top.equalToSuperview().offset(20)
+        }
+        
+        errorLabel.snp.makeConstraints { (view) in
+            view.centerX.equalToSuperview()
+            view.left.equalToSuperview().offset(40)
+            view.right.equalToSuperview().offset(-40)
+            view.top.equalTo(logoImageView.snp.bottom).offset(20)
         }
         
         containerView.snp.makeConstraints { (view) in
             view.left.equalToSuperview().offset(20)
             view.right.equalToSuperview().offset(-20)
             view.centerX.equalToSuperview()
-            view.top.equalTo(logoImageView.snp.bottom).offset(20)
+            view.top.equalTo(errorLabel.snp.bottom).offset(10)
         }
         
         emailTextField.snp.makeConstraints { (view) in
@@ -122,13 +166,19 @@ extension LoginView: ViewConfiguration {
             view.height.equalTo(40)
             view.top.equalTo(containerView.snp.bottom).offset(20)
         }
+        
+        activityIndicator.snp.makeConstraints { (view) in
+            view.center.equalTo(containerView.snp.center)
+        }
     }
     
     func buildViewHierarchy() {
         addSubview(logoImageView)
+        addSubview(errorLabel)
         addSubview(containerView)
         containerView.addSubview(emailTextField)
         containerView.addSubview(passwordTextField)
+        containerView.addSubview(activityIndicator)
         addSubview(confirmButton)
     }
 }
