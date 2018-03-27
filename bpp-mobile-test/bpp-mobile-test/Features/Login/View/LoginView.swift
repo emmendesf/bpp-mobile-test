@@ -24,11 +24,20 @@ class LoginView: UIView {
         return passwordTextField.text ?? ""
     }
     
+    fileprivate lazy var logoImageView: UIImageView = {
+        let imageView = UIImageView(frame: .zero)
+        imageView.image = UIImage(named: "fake_logo")
+        imageView.contentMode = .center
+        return imageView
+    }()
+    
     fileprivate lazy var emailTextField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.placeholder = "email"
         textField.borderStyle = .roundedRect
         textField.text = "waldisney@brasilprepagos.com.br"
+        textField.keyboardType = .emailAddress
+        textField.font = UIFont.systemFont(ofSize: 12, weight: .light)
         return textField
     }()
     
@@ -38,6 +47,7 @@ class LoginView: UIView {
         textField.placeholder = "senha"
         textField.borderStyle = .roundedRect
         textField.text = "Br@silPP123"
+        textField.font = UIFont.systemFont(ofSize: 12, weight: .light)
         return textField
     }()
     
@@ -45,7 +55,9 @@ class LoginView: UIView {
         let button = UIButton(frame: .zero)
         button.setTitle("confirmar", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .orange
+        button.backgroundColor = .CustomBlue
+        button.layer.cornerRadius = 8
+        button.clipsToBounds = true
         button.addTarget(self, action:#selector(self.confirmTapped), for: .touchUpInside)
         return button
     }()
@@ -77,10 +89,18 @@ extension LoginView {
 
 extension LoginView: ViewConfiguration {
     func setupConstraints() {
+        logoImageView.snp.makeConstraints { (view) in
+            view.centerX.equalToSuperview()
+            view.height.equalTo(160)
+            view.width.equalTo(171)
+            view.top.equalToSuperview().offset(30)
+        }
+        
         containerView.snp.makeConstraints { (view) in
-            view.left.equalToSuperview().offset(16)
-            view.right.equalToSuperview().offset(-16)
-            view.center.equalToSuperview()
+            view.left.equalToSuperview().offset(20)
+            view.right.equalToSuperview().offset(-20)
+            view.centerX.equalToSuperview()
+            view.top.equalTo(logoImageView.snp.bottom).offset(20)
         }
         
         emailTextField.snp.makeConstraints { (view) in
@@ -91,27 +111,24 @@ extension LoginView: ViewConfiguration {
         
         passwordTextField.snp.makeConstraints { (view) in
             view.height.equalTo(40)
-            view.left.equalToSuperview()
-            view.right.equalToSuperview()
-            view.top.equalTo(emailTextField.snp.bottom).offset(8)
-            view.bottom.equalToSuperview().offset(-16)
+            view.left.right.equalToSuperview()
+            view.top.equalTo(emailTextField.snp.bottom).offset(10)
+            view.bottom.equalToSuperview()
         }
         
         confirmButton.snp.makeConstraints { (view) in
-            view.left.equalToSuperview().offset(16)
-            view.right.equalToSuperview().offset(-16)
-            view.top.equalTo(passwordTextField.snp.bottom).offset(8)
+            view.left.equalToSuperview().offset(20)
+            view.right.equalToSuperview().offset(-20)
+            view.height.equalTo(40)
+            view.top.equalTo(containerView.snp.bottom).offset(20)
         }
     }
     
     func buildViewHierarchy() {
+        addSubview(logoImageView)
         addSubview(containerView)
         containerView.addSubview(emailTextField)
         containerView.addSubview(passwordTextField)
         addSubview(confirmButton)
-    }
-    
-    func configureViews() {
-        
     }
 }

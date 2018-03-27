@@ -145,8 +145,4 @@ extension InvoiceTableViewCell: ViewConfiguration {
             view.height.equalTo(1)
         }
     }
-    
-    func configureViews() {
-        
-    }
 }

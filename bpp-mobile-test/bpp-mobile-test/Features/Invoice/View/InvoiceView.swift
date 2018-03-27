@@ -38,8 +38,4 @@ extension InvoiceView: ViewConfiguration {
             view.edges.equalToSuperview()
         }
     }
-    
-    func configureViews() {
-        
-    }
 }

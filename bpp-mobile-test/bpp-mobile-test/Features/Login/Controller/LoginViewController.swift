@@ -22,6 +22,12 @@ class LoginViewController: UIViewController {
         self.title = "Login"
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setupGradient()
+        self.edgesForExtendedLayout = []
+    }
+    
     init(service: LoginServiceProtocol = LoginService()) {
         self.service = service
         super.init(nibName: nil, bundle: nil)
@@ -48,5 +54,9 @@ fileprivate extension LoginViewController {
                 print(error)
             }
         }
+    }
+    
+    func setupGradient() {
+        self.view.addGradient(colors: [.CustomBlue, .white], direction: .top)
     }
 }
