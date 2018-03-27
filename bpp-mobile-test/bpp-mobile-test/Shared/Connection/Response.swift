@@ -9,8 +9,8 @@
 import Foundation
 
 public enum Response {
-    case success(_: Data)
-    case error(_: Int?, _: Error?)
+    case success(Data)
+    case error(Int?, Error?)
     
     init(_ response: (r: HTTPURLResponse?, data: Data?, error: Error?), for request: Request) {
         guard response.r?.statusCode == 200, response.error == nil else {

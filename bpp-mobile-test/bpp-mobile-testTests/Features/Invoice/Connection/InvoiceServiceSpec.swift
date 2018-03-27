@@ -1,8 +1,8 @@
 //
-//  LoginServiceSpec.swift
+//  InvoiceServiceSpec.swift
 //  bpp-mobile-testTests
 //
-//  Created by Emerson Mendes Filho on 25/03/2018.
+//  Created by Emerson Mendes Filho on 27/03/2018.
 //  Copyright © 2018 Emerson Mendes Filho. All rights reserved.
 //
 
@@ -11,9 +11,9 @@ import Nimble
 
 @testable import bpp_mobile_test
 
-final class LoginServiceSpec: QuickSpec {
+final class InvoiceServiceSpec: QuickSpec {
     override func spec() {
-        var sut: LoginService!
+        var sut: InvoiceService!
         var connectionDispatcherMock: ConnectionDispatcherMock!
         
         func checkSuccessCallback<T>(_ result: Result<T>) {
@@ -36,12 +36,12 @@ final class LoginServiceSpec: QuickSpec {
             }).to(succeed())
         }
         
-        describe("given LoginService") {
+        describe("given InvoiceService") {
             
             beforeEach {
                 connectionDispatcherMock = ConnectionDispatcherMock()
                 let core = ConnectionCore(dispatcher: connectionDispatcherMock)
-                sut = LoginService(core: core)
+                sut = InvoiceService(core: core)
             }
             
             it("should be able to create a instance of Barcode Reader Service") {
@@ -54,7 +54,7 @@ final class LoginServiceSpec: QuickSpec {
                 }
                 
                 it("then fetchPayments should succeed") {
-                    sut.login(email: "", password: "", completion: checkSuccessCallback)
+                    sut.invoice(completion: checkSuccessCallback)
                 }
             }
             
@@ -64,7 +64,7 @@ final class LoginServiceSpec: QuickSpec {
                 }
                 
                 it("then fetchPayments should fail") {
-                    sut.login(email: "", password: "", completion: checkErrorCallback)
+                    sut.invoice(completion: checkErrorCallback)
                 }
             }
         }
