@@ -35,8 +35,9 @@ class LoginView: UIView {
         let textField = UITextField(frame: .zero)
         textField.placeholder = "email"
         textField.borderStyle = .roundedRect
-        textField.text = "waldisney@brasilprepagos.com.br"
         textField.keyboardType = .emailAddress
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.font = UIFont.systemFont(ofSize: 12, weight: .light)
         return textField
     }()
@@ -46,7 +47,6 @@ class LoginView: UIView {
         textField.isSecureTextEntry = true
         textField.placeholder = "senha"
         textField.borderStyle = .roundedRect
-        textField.text = "Br@silPP123"
         textField.font = UIFont.systemFont(ofSize: 12, weight: .light)
         return textField
     }()

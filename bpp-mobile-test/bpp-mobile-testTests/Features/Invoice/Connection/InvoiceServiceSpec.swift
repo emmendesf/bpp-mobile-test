@@ -20,6 +20,7 @@ final class InvoiceServiceSpec: QuickSpec {
             
             beforeEach {
                 connectionDispatcherMock = ConnectionDispatcherMock()
+                connectionDispatcherMock.dataMock = MockHelper<[Invoice], InvoiceServiceSpec>().data(from: "invoice_list")
                 let core = ConnectionCore(dispatcher: connectionDispatcherMock)
                 sut = InvoiceService(core: core)
             }

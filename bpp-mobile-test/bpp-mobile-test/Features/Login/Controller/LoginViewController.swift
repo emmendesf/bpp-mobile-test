@@ -24,8 +24,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        setupGradient()
         self.edgesForExtendedLayout = []
+        setupGradient()
     }
     
     init(service: LoginServiceProtocol = LoginService()) {
@@ -51,7 +51,7 @@ fileprivate extension LoginViewController {
             switch result {
             case .success:
                 self.loginView.updateViewState(.ready)
-                self.navigationController?.pushViewController(InvoiceViewController(), animated: true)
+                self.navigationController?.pushViewController(InvoiceViewController(), animated: false)
             case let .error(error):
                 self.loginView.updateViewState(.error(self.errorMessage(error)))
             }

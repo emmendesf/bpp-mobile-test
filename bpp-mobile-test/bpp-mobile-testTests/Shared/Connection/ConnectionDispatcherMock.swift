@@ -12,6 +12,7 @@ import Nimble
 
 final class ConnectionDispatcherMock: Dispatcher {
     var shouldReturnSuccess = false
+    var dataMock = Data()
     
     required public init(environment: ConnectionEnvironment = EnvironmentType.default.environment) {
         
@@ -19,7 +20,7 @@ final class ConnectionDispatcherMock: Dispatcher {
     
     public func execute(request: Request, completion: @escaping DispatcherCompletion) throws {
         if shouldReturnSuccess {
-            completion(Response.success(Data()))
+            completion(Response.success(dataMock))
         } else {
             completion(Response.error(nil, nil))
         }

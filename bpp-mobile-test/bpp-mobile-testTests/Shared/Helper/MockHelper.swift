@@ -17,4 +17,9 @@ final class MockHelper<T: Codable, B: AnyObject> {
         decoder.dateDecodingStrategy = .formatted(DateFormatter.transactionFormattedDateFormatter)
         return try! decoder.decode(T.self, from: data)
     }
+    
+    func data(from fileName: String) -> Data {
+        let urlPath = Bundle(for: B.self).url(forResource: fileName, withExtension: "json")!
+        return try! Data(contentsOf: urlPath, options: .mappedIfSafe)
+    }
 }

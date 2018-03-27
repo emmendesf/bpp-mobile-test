@@ -20,6 +20,7 @@ final class LoginServiceSpec: QuickSpec {
             
             beforeEach {
                 connectionDispatcherMock = ConnectionDispatcherMock()
+                connectionDispatcherMock.dataMock = MockHelper<ResponseModel, LoginViewControllerSpec>().data(from: "login_success")
                 let core = ConnectionCore(dispatcher: connectionDispatcherMock)
                 sut = LoginService(core: core)
             }
