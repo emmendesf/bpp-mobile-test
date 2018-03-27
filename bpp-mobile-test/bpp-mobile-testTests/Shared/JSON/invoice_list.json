@@ -1,0 +1,59 @@
+ [
+  {
+  "transactionId": "806816958276783628074646240000001812",
+  "transactionDate": "09032018 13:36:56",
+  "transactionFormattedDate": "2018-03-09T13:36:56",
+  "transactionCurrency": "BRL",
+  "transactionAmount": 19.4,
+  "billingCurrency": "BRL",
+  "billingAmount": 19.4,
+  "transactionStatus": "Settled",
+  "transactionName": "000000-Purchase",
+  "merchantName": "RESTAURANTE FLORE",
+  "mccCode": "5812",
+  "mccDescription": "Restaurants"
+  },
+  {
+  "transactionId": "802922672929WW1706524646240000001812",
+  "transactionDate": "29012018 20:14:41",
+  "transactionFormattedDate": "2018-01-29T20:14:41",
+  "transactionCurrency": "BRL",
+  "transactionAmount": 5,
+  "billingCurrency": "BRL",
+  "billingAmount": 5,
+  "transactionStatus": "Reversed",
+  "transactionName": "000000-Purchase",
+  "merchantName": "BUFFET BIA",
+  "mccCode": "5814",
+  "mccDescription": "Fast Food"
+  },
+  {
+  "transactionId": "802922672929WW1706524646240000001812",
+  "transactionDate": "29012018 20:12:46",
+  "transactionFormattedDate": "2018-01-29T20:12:46",
+  "transactionCurrency": "BRL",
+  "transactionAmount": 5,
+  "billingCurrency": "BRL",
+  "billingAmount": 5,
+  "transactionStatus": "Pending",
+  "transactionName": "000000-Purchase",
+  "merchantName": "BUFFET BIA",
+  "mccCode": "5814",
+  "mccDescription": "Fast Food"
+  },
+  {
+  "transactionId": "800914090409761562004646240000001812",
+  "transactionDate": "09012018 12:51:12",
+  "transactionFormattedDate": "2018-01-09T12:51:12",
+  "transactionCurrency": "BRL",
+  "transactionAmount": 13,
+  "billingCurrency": "BRL",
+  "billingAmount": 13,
+  "transactionStatus": "Declined",
+  "transactionName": "000000-Purchase",
+  "merchantName": "REDE OBA - CAROLI",
+  "mccCode": "5411",
+  "mccDescription": "Grocery Stores and Supermarkets"
+  }
+]
+
