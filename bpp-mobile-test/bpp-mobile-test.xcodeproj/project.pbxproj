@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F47FF6020D1B92C0099658D /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F47FF5C20D1B92C0099658D /* Nimble_Snapshots.framework */; };
+		1F47FF6120D1B92C0099658D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F47FF5D20D1B92C0099658D /* Nimble.framework */; };
+		1F47FF6220D1B92C0099658D /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F47FF5E20D1B92C0099658D /* FBSnapshotTestCase.framework */; };
+		1F47FF6320D1B92C0099658D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F47FF5F20D1B92C0099658D /* Quick.framework */; };
+		1F47FF6520D1BC310099658D /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4B93EF20D1B49E00A184E4 /* IQKeyboardManagerSwift.framework */; };
+		1F47FF6620D1BC310099658D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4B93EE20D1B49E00A184E4 /* SnapKit.framework */; };
+		1F47FF6A20D1BC620099658D /* IQKeyboardManagerSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F47FF6820D1BC610099658D /* IQKeyboardManagerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F47FF6B20D1BC620099658D /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F47FF6920D1BC610099658D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F80F29D2069E5AD00D239F6 /* InvoiceTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F80F29C2069E5AD00D239F6 /* InvoiceTableViewCellSpec.swift */; };
 		1F80F2A12069EABB00D239F6 /* invoice_object.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F80F2A02069EABB00D239F6 /* invoice_object.json */; };
 		1F80F2A72069EFF800D239F6 /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F80F2A62069EFF800D239F6 /* LoginViewControllerSpec.swift */; };
@@ -48,8 +56,10 @@
 		1F8591A32069C4C200F84540 /* ColorPallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591A22069C4C200F84540 /* ColorPallet.swift */; };
 		1F8591A52069C7A100F84540 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591A42069C7A100F84540 /* Gradient.swift */; };
 		1F8591A72069CEDB00F84540 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8591A62069CEDB00F84540 /* ViewState.swift */; };
-		25F29E9C783E52FB43D47061 /* Pods_bpp_mobile_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61F4E1558E9F12929F804DF /* Pods_bpp_mobile_testTests.framework */; };
-		7D2020053EFC73F37DB18521 /* Pods_bpp_mobile_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */; };
+		1FFB082120D3E0560024B9ED /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F47FF5E20D1B92C0099658D /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FFB082220D3E0560024B9ED /* Nimble_Snapshots.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F47FF5C20D1B92C0099658D /* Nimble_Snapshots.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FFB082320D3E0560024B9ED /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F47FF5D20D1B92C0099658D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FFB082420D3E0560024B9ED /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F47FF5F20D1B92C0099658D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +72,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1F47FF6720D1BC370099658D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1F47FF6A20D1BC620099658D /* IQKeyboardManagerSwift.framework in CopyFiles */,
+				1F47FF6B20D1BC620099658D /* SnapKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FFB082020D3E03C0024B9ED /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1FFB082120D3E0560024B9ED /* FBSnapshotTestCase.framework in CopyFiles */,
+				1FFB082220D3E0560024B9ED /* Nimble_Snapshots.framework in CopyFiles */,
+				1FFB082320D3E0560024B9ED /* Nimble.framework in CopyFiles */,
+				1FFB082420D3E0560024B9ED /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1F47FF5C20D1B92C0099658D /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
+		1F47FF5D20D1B92C0099658D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		1F47FF5E20D1B92C0099658D /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		1F47FF5F20D1B92C0099658D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		1F47FF6820D1BC610099658D /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
+		1F47FF6920D1BC610099658D /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		1F4B93EE20D1B49E00A184E4 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		1F4B93EF20D1B49E00A184E4 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
 		1F80F29C2069E5AD00D239F6 /* InvoiceTableViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCellSpec.swift; sourceTree = "<group>"; };
 		1F80F2A02069EABB00D239F6 /* invoice_object.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = invoice_object.json; sourceTree = "<group>"; };
 		1F80F2A62069EFF800D239F6 /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -108,12 +153,6 @@
 		1F8591A22069C4C200F84540 /* ColorPallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallet.swift; sourceTree = "<group>"; };
 		1F8591A42069C7A100F84540 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		1F8591A62069CEDB00F84540 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
-		333A41103A063AF1F16547CA /* Pods-bpp-mobile-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests.release.xcconfig"; sourceTree = "<group>"; };
-		5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bpp_mobile_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66F209FA688E292FD2B944F4 /* Pods-bpp-mobile-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test.debug.xcconfig"; sourceTree = "<group>"; };
-		714DB2D0CE69290230BBEC99 /* Pods-bpp-mobile-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test.release.xcconfig"; sourceTree = "<group>"; };
-		80FEE4A2662A6ACEBEE24342 /* Pods-bpp-mobile-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bpp-mobile-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B61F4E1558E9F12929F804DF /* Pods_bpp_mobile_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bpp_mobile_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D2020053EFC73F37DB18521 /* Pods_bpp_mobile_test.framework in Frameworks */,
+				1F47FF6520D1BC310099658D /* IQKeyboardManagerSwift.framework in Frameworks */,
+				1F47FF6620D1BC310099658D /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,13 +169,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25F29E9C783E52FB43D47061 /* Pods_bpp_mobile_testTests.framework in Frameworks */,
+				1F47FF6020D1B92C0099658D /* Nimble_Snapshots.framework in Frameworks */,
+				1F47FF6120D1B92C0099658D /* Nimble.framework in Frameworks */,
+				1F47FF6220D1B92C0099658D /* FBSnapshotTestCase.framework in Frameworks */,
+				1F47FF6320D1B92C0099658D /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F4B93ED20D1B49E00A184E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F47FF5E20D1B92C0099658D /* FBSnapshotTestCase.framework */,
+				1F47FF5C20D1B92C0099658D /* Nimble_Snapshots.framework */,
+				1F47FF5D20D1B92C0099658D /* Nimble.framework */,
+				1F47FF5F20D1B92C0099658D /* Quick.framework */,
+				1F4B93EF20D1B49E00A184E4 /* IQKeyboardManagerSwift.framework */,
+				1F4B93EE20D1B49E00A184E4 /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1F80F29A2069E58900D239F6 /* Invoice */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,11 +266,12 @@
 		1F85912F2067FAFD00F84540 = {
 			isa = PBXGroup;
 			children = (
+				1F47FF6820D1BC610099658D /* IQKeyboardManagerSwift.framework */,
+				1F47FF6920D1BC610099658D /* SnapKit.framework */,
 				1F85913A2067FAFD00F84540 /* bpp-mobile-test */,
 				1F85914F2067FAFE00F84540 /* bpp-mobile-testTests */,
 				1F8591392067FAFD00F84540 /* Products */,
-				D68EE7FEE38F31A43AFC5337 /* Pods */,
-				C70F327547331D45CD191E74 /* Frameworks */,
+				1F4B93ED20D1B49E00A184E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -453,26 +510,6 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
-		C70F327547331D45CD191E74 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5169849646C9954A7A7860FA /* Pods_bpp_mobile_test.framework */,
-				B61F4E1558E9F12929F804DF /* Pods_bpp_mobile_testTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D68EE7FEE38F31A43AFC5337 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				66F209FA688E292FD2B944F4 /* Pods-bpp-mobile-test.debug.xcconfig */,
-				714DB2D0CE69290230BBEC99 /* Pods-bpp-mobile-test.release.xcconfig */,
-				80FEE4A2662A6ACEBEE24342 /* Pods-bpp-mobile-testTests.debug.xcconfig */,
-				333A41103A063AF1F16547CA /* Pods-bpp-mobile-testTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -480,12 +517,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F8591552067FAFE00F84540 /* Build configuration list for PBXNativeTarget "bpp-mobile-test" */;
 			buildPhases = (
-				0AFA949CD343F05E69759713 /* [CP] Check Pods Manifest.lock */,
 				1F8591342067FAFD00F84540 /* Sources */,
 				1F8591352067FAFD00F84540 /* Frameworks */,
 				1F8591362067FAFD00F84540 /* Resources */,
-				52CEE3E69B34EA944B0FB34C /* [CP] Embed Pods Frameworks */,
-				5B7DD474C18EB9E677D9710A /* [CP] Copy Pods Resources */,
+				1F4B93F220D1B4B900A184E4 /* ShellScript */,
+				1F47FF6720D1BC370099658D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -500,12 +536,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F8591582067FAFE00F84540 /* Build configuration list for PBXNativeTarget "bpp-mobile-testTests" */;
 			buildPhases = (
-				1A2E68A882FE5B9BF3CAEA8D /* [CP] Check Pods Manifest.lock */,
 				1F8591482067FAFE00F84540 /* Sources */,
 				1F8591492067FAFE00F84540 /* Frameworks */,
 				1F85914A2067FAFE00F84540 /* Resources */,
-				E60B65EE9D010E37DBCFF916 /* [CP] Embed Pods Frameworks */,
-				807573AA39BF09E3274A6321 /* [CP] Copy Pods Resources */,
+				1FFB082020D3E03C0024B9ED /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -581,115 +615,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0AFA949CD343F05E69759713 /* [CP] Check Pods Manifest.lock */ = {
+		1F4B93F220D1B4B900A184E4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-bpp-mobile-test-checkManifestLockResult.txt",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1A2E68A882FE5B9BF3CAEA8D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-bpp-mobile-testTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		52CEE3E69B34EA944B0FB34C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5B7DD474C18EB9E677D9710A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bpp-mobile-test/Pods-bpp-mobile-test-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		807573AA39BF09E3274A6321 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E60B65EE9D010E37DBCFF916 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bpp-mobile-testTests/Pods-bpp-mobile-testTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -874,10 +815,13 @@
 		};
 		1F8591562067FAFE00F84540 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66F209FA688E292FD2B944F4 /* Pods-bpp-mobile-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "bpp-mobile-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mendes.emerson.bpp-mobile-test";
@@ -889,10 +833,13 @@
 		};
 		1F8591572067FAFE00F84540 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 714DB2D0CE69290230BBEC99 /* Pods-bpp-mobile-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "bpp-mobile-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mendes.emerson.bpp-mobile-test";
@@ -904,11 +851,14 @@
 		};
 		1F8591592067FAFE00F84540 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80FEE4A2662A6ACEBEE24342 /* Pods-bpp-mobile-testTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "bpp-mobile-testTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mendes.emerson.bpp-mobile-testTests";
@@ -921,11 +871,14 @@
 		};
 		1F85915A2067FAFE00F84540 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 333A41103A063AF1F16547CA /* Pods-bpp-mobile-testTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "bpp-mobile-testTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mendes.emerson.bpp-mobile-testTests";
